@@ -1,4 +1,4 @@
-// Elemtos a los que le aplicaremos el innerHTML o donde se ingresa el DOM
+// Elementos a los que le aplicaremos el innerHTML o donde se ingresa el DOM
 const topText = document.getElementById('topText');
 const segundoTexto = document.getElementById('boton-bajo');
 const colorLetra = document.getElementById('colorLetra');
@@ -6,6 +6,7 @@ const fondoLabel = document.getElementById('fondoLabel');
 const textoColor = document.getElementById('textoColor');
 const colorLabelFondo = document.getElementById('colorLabelFondo');
 const centerText = document.getElementById('centroTextoMedio');
+const contenedorPrincipal = document.getElementById('contenedorPrincipal');
 
 
 // Elementos a los que se les aplicara los eventos
@@ -20,6 +21,7 @@ const derecha = document.getElementById('derecha');
 const centrar = document.getElementById('centrar');
 const transparente = document.getElementById('transparente');
 const urlImg = document.getElementById('url-img');
+const contorno = document.getElementById('contorno');
 
 /***************************************************/
 //Cambio de texto superior
@@ -125,18 +127,34 @@ fondoLabel.addEventListener('input', (e) =>{
 /***************************************************/
 //Transparencia de fondo
 
-transparente.addEventListener('click', (e) => {
-  if(e.target.checked){
-    topText.style.backgroundColor = 'rgba(0,0,0,.9)';
-    transparente= '';
-    // nos quedamos en darle transparencia a las cajas superior e inferior
+function actualizarFondoTexto() {
+  if (transparente.checked) {
+    const color = fondoLabel.value
 
+    fondoLabel.innerText = color.toUpperCase()
+    topText.style.backgroundColor = color
+    segundoTexto.style.backgroundColor = color
+  }else {
+    topText.style.backgroundColor = 'transparent'
+    segundoTexto.style.backgroundColor = 'transparent'
   }
-})
+}
 
 /***************************************************/
 
+//Cambio de contorno en la letra
 
+function valorContorno(){
+  if(contorno.checked){
+
+  }
+}
+
+
+
+
+
+/***************************************************/
 //Cambio de "aside texto" a "aside imagen"
 
 const panelImg = document.getElementById('panelImg');

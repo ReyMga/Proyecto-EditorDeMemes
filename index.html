@@ -44,7 +44,7 @@
   
   <section class="textoSeccionCenter" >
     <!--****************COMIENZO DEL MAIN TEXTO**********************-->
-    <main class="cajaMain">
+    <main class="cajaMain" id="contenedorPrincipal">
       <section class="cajaSeccion">
         <article id="topText" class="topText">TOP TEXT</article>
         <article class="centerText" id="centroTextoMedio"></article>
@@ -149,7 +149,7 @@
     <!----****************COMIENZO DEL ASIDE DE TEXTO**********************---------------->
     <aside class="columnaLateralTexto" id="textoSeccion">
     <form>
-      <h2 class="tituloTextoAside">TEXTO</h2>
+      <h2 class="tituloTextoAside" id="tituloTexxt">TEXTO</h2>
 
       <div  class="contenedorColumnaTexto">
         <h4 class="panel-control-title">SUPERIOR</h4>
@@ -178,7 +178,7 @@
 
         <div class="contenedorColumnaTexto">
 
-          <label for="top-check-2" class="top-check-2">Sin texto inferior
+          <label for="top-check-2" class="top-check-2" >Sin texto inferior
             <input id="top-check-2" type="checkbox">
           </label>
 
@@ -226,8 +226,8 @@
 
         <div class="contenedorColumnaTexto">
 
-          <label for="transparente" class="transparente">Fondo transparente
-            <input id="top-check-2" id="transparente" type="checkbox">
+          <label for="transparente" class="transparente" onclick="actualizarFondoTexto()">Fondo transparente
+            <input class="top-check-2" id="transparente" type="checkbox">
           </label>
 
         </div>
@@ -240,7 +240,7 @@
         </div>
 
         <div class="contorno-boton">
-          <button id="botonContorno">NINGUNO</button>
+          <button id="botonContorno"   onclick="valorContorno()" >NINGUNO</button>
           <button id="botonContorno">CLARO</button>
           <button id="botonContorno">OSCURO</button>
         </div>
