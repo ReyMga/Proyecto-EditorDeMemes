@@ -7,6 +7,8 @@ const textoColor = document.getElementById('textoColor');
 const colorLabelFondo = document.getElementById('colorLabelFondo');
 const centerText = document.getElementById('centroTextoMedio');
 const contenedorPrincipal = document.getElementById('contenedorPrincipal');
+const valorEspaciado = document.getElementById('espaciadoValue');
+const valorInterlineado =  document.getElementById('interlineadoValue');
 
 
 // Elementos a los que se les aplicara los eventos
@@ -21,7 +23,8 @@ const derecha = document.getElementById('derecha');
 const centrar = document.getElementById('centrar');
 const transparente = document.getElementById('transparente');
 const urlImg = document.getElementById('url-img');
-const contorno = document.getElementById('contorno');
+const botonContornoClaro = document.getElementById('botonContorno-claro');
+const botonContornoOscuro = document.getElementById('botonContorno-oscuro');
 
 /***************************************************/
 //Cambio de texto superior
@@ -62,15 +65,20 @@ topCheckBajo.addEventListener('click',() => {
 
 /***************************************************/
 
-//Estilos de fuente 
+//Estilos de fuente superior
 
 estilosDeFuentes.addEventListener('change', () => {
   topText.style.fontFamily = `${estilosDeFuentes.value}`;
 });
 
+//Estilos de fuente inferior
+
+estilosDeFuentes.addEventListener('change', () => {
+  segundoTexto.style.fontFamily = `${estilosDeFuentes.value}`;
+});
 
 /***************************************************/
-//Tamaño de Letra
+//Tamaño de Letra superior
 
 tamañoLetra.addEventListener('keyup', () => {
   topText.style.fontSize = `${tamañoLetra.value}px`
@@ -81,6 +89,16 @@ tamañoLetra.addEventListener('click', () => {
   topText.style.fontSize = `${tamañoLetra.value}px`
 });
 
+//Tamaño de Letra inferior
+
+tamañoLetra.addEventListener('keyup', () => {
+  segundoTexto.style.fontSize = `${tamañoLetra.value}px`
+});
+
+
+tamañoLetra.addEventListener('click', () => {
+  segundoTexto.style.fontSize = `${tamañoLetra.value}px`
+});
 
 /***************************************************/
 
@@ -128,9 +146,8 @@ fondoLabel.addEventListener('input', (e) =>{
 //Transparencia de fondo
 
 function actualizarFondoTexto() {
-  if (transparente.checked) {
+  if (!transparente.checked) {
     const color = fondoLabel.value
-
     fondoLabel.innerText = color.toUpperCase()
     topText.style.backgroundColor = color
     segundoTexto.style.backgroundColor = color
@@ -144,17 +161,48 @@ function actualizarFondoTexto() {
 
 //Cambio de contorno en la letra
 
-function valorContorno(){
-  if(contorno.checked){
-
+function contornear(e, contorno){
+  e.preventDefault();
+  switch (contorno) {
+    case  'ninguno':
+      topText.style.textShadow='none';
+      segundoTexto.style.textShadow='none';
+      break;
+  
+    case 'claro':
+      topText.style.textShadow= '2px 2px #FFF, -2px -2px #FFF,  2px 2px #FFF, -2px -2px #FFF, 2px 2px #FFF';
+      segundoTexto.style.textShadow= '2px 2px #FFF, -2px -2px #FFF,  2px 2px #FFF, -2px -2px #FFF, 2px 2px #FFF';
+      break;
+    case 'oscuro':
+      topText.style.textShadow='2px 2px #000, -2px -2px #000,  2px 2px #000, -2px -2px #000, 2px 2px #000';
+      segundoTexto.style.textShadow='2px 2px #000, -2px -2px #000,  2px 2px #000, -2px -2px #000, 2px 2px #000';
+      break;
   }
+  
 }
 
+/***************************************************/
 
+//Espaciado 
 
-
+const espaciadoTexto = () => {
+  const espaciado = valorEspaciado.value
+  topText.style.padding = `${espaciado}px 50px`
+  segundoTexto.style.padding = `${espaciado}px 50px`
+}
 
 /***************************************************/
+
+//Interlineado 
+
+const aplicandoInterlineado = () => {
+  const interlineadoDefinido = valorInterlineado.value
+  topText.style.lineHeight = interlineadoDefinido;
+  segundoTexto.style.lineHeight = interlineadoDefinido;
+}
+
+/***************************************************/
+
 //Cambio de "aside texto" a "aside imagen"
 
 const panelImg = document.getElementById('panelImg');
@@ -179,7 +227,7 @@ function showTextAtributes(){
 
   // Unifico los botones
 
-  //En la línea 122, tuve que añadirle un split al href, porque me devolvía la ruta completa.  
+  //En la línea 122, tuve que añadirle un split al href, porque me devolvía la ruta completa. Esto se debe a que yo elegir armar mi Dark mode y light mode, basandome en archivos de CSS, en lugar de llamarlo desde el body como lo haría normalmente.
 
 function cambiarArchivo(boton){
   let archivoActual = document.getElementById('cssArchivo').href.split('/')[document.getElementById('cssArchivo').href.split('/').length - 1];
@@ -193,4 +241,5 @@ function cambiarArchivo(boton){
   }
 }
 
+/***************************************************/
 
