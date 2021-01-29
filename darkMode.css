@@ -52,15 +52,19 @@ body{
 }
     
 .cajaSeccion {
-    width: 48%;
-    margin-left: 30%;
-    height: 75%;
-    background-color: #000;
-    border: 1px solid black;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20%;
+  height: 472px;
+  margin-top: 19%;
+  margin-bottom: 38%;
+  width: 100%;
+  margin-left: 25%;
+  max-width: 53%;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  border: 1px solid black;
+  
 }
   
 .cajaPadre{
@@ -68,13 +72,20 @@ body{
     width: 100%;
 }
   
+
 .topText{ 
-    height: 19%;
-    padding-top: 2%;
-    background-color: grey;
-    color: whitesmoke;
-    -webkit-text-stroke: 3px black;
-    
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding: 25px 50px;
+  font-size: 40px;
+  font-weight: 800;
+  top: 0;
+  position: absolute;
+  background-color: grey;
+  color: whitesmoke;
+  -webkit-text-stroke: 3px black;  
+  z-index: 999;
 }
   
 #textoColor, #colorLabelFondo{
@@ -85,11 +96,17 @@ body{
 }
   
 .textoBajo{  
-    height: 21%;
-    padding-top: 2%;
-    background-color: grey;
-    color: whitesmoke;
-    -webkit-text-stroke: 3px black;
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding: 25px 50px;
+  font-size: 40px;
+  font-weight: 800;
+  background-color: grey;
+  color: whitesmoke;
+  bottom: 0;
+  position: absolute;
+  -webkit-text-stroke: 3px black;
 }
   
 .espaciado-class{
@@ -101,6 +118,9 @@ body{
     height: 60%;
     padding: 20%;
     background-color: black;
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
   }
     
   
@@ -179,8 +199,20 @@ body{
     padding: 2%;
   }
   
+  .colorBotonTexto{
+    display: flex;
+    flex-direction: column;
+    margin: 2% auto;
+    width: 50%;
+  }
   
-  
+  .codigoColor{
+    display: flex;
+    flex-direction: column;
+    margin: 4% auto;
+    width: 50%;
+  }
+
   .seccion-imagen{
     color: #D124B7;
     margin-top: 0;
@@ -432,6 +464,10 @@ body{
     background-color: #4E5565;
   }
     
+  #botonContorno-vacio, #botonContorno-claro, #botonContorno-oscuro{
+    cursor: pointer;
+  }
+  
     
   .contenedorColumnaTexto{
     width: 100%;
@@ -450,11 +486,11 @@ body{
     margin: 2%;
   }
   
-  #top-check-2{
+  .top-check-2{
     margin: 1%;
   }
   
-  #boton-checkbox, #top-check-2{
+  #boton-checkbox, .top-check-2, .transparente{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -463,6 +499,10 @@ body{
     color: whitesmoke;
   
   }
+
+  #centroTextoMedio{
+    background-size: 100%;
+  }
   
   .panel-control-title, .titulo-url, .titulo-fondo{
     font-size: 12px;
@@ -470,7 +510,7 @@ body{
     margin-bottom: 2%;
   }
   
-  #ingresoTitulo, #ingresoTituloInferior{
+  #ingresoTitulo, #textoInferior{
     width: 95%;
     padding-top: 5%;
     height: 30%;
@@ -491,7 +531,7 @@ body{
   }
   
   
-  #fuente{
+  #fuente, .titleColorLabel{
     font-size: 12px;
     margin-bottom: 6px;
     border-radius: 5%;
@@ -521,15 +561,37 @@ body{
     background-color:  #4E5565;
     cursor: pointer;
   }
+
+  #colorLetra{
+    background-color: rgb(68, 65, 65);
+    border: transparent;
+    cursor: pointer;
+    height: auto;
+    width: 25%;
+  }
   
-  #colorLetraInput, #fondoLabelInput{
+  #colorLetraInput{
     background-color:  whitesmoke;
     cursor: pointer;
   }
   
+  .titleColorLabel,.fondoLabelInput{
+    font-size: 12px;
+    margin-bottom: 0px;
+    border-radius: 5%;
+    color: whitesmoke;
+  }
+
   .fondo {
     margin-top: 13%;
     margin-bottom: 20px;
   }
   
+  #fondoLabel{
+    background-color: rgb(68, 65, 65);
+    border: transparent;
+    cursor: pointer;
+    height: auto;
+    width: 25%;
+  }
   

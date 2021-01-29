@@ -64,15 +64,19 @@ body{
 }
   
 .cajaSeccion {
-  width: 48%;
-  margin-left: 30%;
-  height: 75%;
+  height: 472px;
+  margin-top: 19%;
+  margin-bottom: 38%;
+  width: 100%;
+  margin-left: 25%;
+  max-width: 53%;
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: #000;
   border: 1px solid black;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 20%;
+
 }
 
 .cajaPadre{
@@ -81,9 +85,15 @@ body{
 }
 
 .topText{ 
-  height: 21%;
-  padding-top: 2%;
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding: 25px 50px;
+  font-size: 40px;
+  top: 0;
+  font-weight: 800;
   background-color: var( --fondoLila);
+  z-index: 999;
 }
 
 #textoColor, #colorLabelFondo{
@@ -98,8 +108,14 @@ body{
 }
 
 .textoBajo{  
-  height: 21%;
-  padding-top: 2%;
+  width: 100%;
+  color: black;
+  bottom: 0;
+  text-align: center;
+  padding: 25px 50px;
+  position: absolute;
+  font-size: 40px;
+  font-weight: 800;
   background-color: var( --fondoLila);
 }
 
@@ -112,6 +128,9 @@ body{
   height: 60%;
   padding: 20%;
   background-color: black;
+  width: 100%;
+  flex-grow: 1;
+  background-size: cover;
 }
   
 .colorBotonTexto{
@@ -167,7 +186,9 @@ body{
   color: var(--colorLetras);;
 }
 
-
+#botonContorno-vacio, #botonContorno-claro, #botonContorno-oscuro{
+  cursor: pointer;
+}
 
 
 .titulo-url{
@@ -182,6 +203,7 @@ body{
   margin:2% auto;
 }
   
+
 
 .botonEstilos{
   display: flex;

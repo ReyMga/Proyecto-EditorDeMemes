@@ -62,7 +62,7 @@
 
       <div class="seccionUrl">
         <h4 class="titulo-url">URL</h4>
-        <input type="text" class="inputUrl-imagen" id="inputImagen" aria-label="ingreso URL">
+        <input type="text" class="inputUrl-imagen" id="inputImagen"  aria-label="ingreso URL">
       </div>
           
       
@@ -77,12 +77,12 @@
 
           <div class="fondo-combinacion">
             <select  id="opcionesFondo" class="filtros-opciones">
-              <option value="ninguno">Ninguno</option>
-              <option value="aclarar">Aclarar</option>
-              <option value="oscurecer">Oscurecer</option>
-              <option value="diferencia">Diferencia</option>
-              <option value="luminosidad">Luminosidad</option>
-              <option value="multiplicar">Multiplicar</option>
+              <option value="ninguno" onkeypress="actualizarTipoMezcla()">Ninguno</option>
+              <option value="aclarar" onkeypress="actualizarTipoMezcla()">Aclarar</option>
+              <option value="oscurecer" onkeypress="actualizarTipoMezcla()">Oscurecer</option>
+              <option value="diferencia" onkeypress="actualizarTipoMezcla()">Diferencia</option>
+              <option value="luminosidad" onkeypress="actualizarTipoMezcla()">Luminosidad</option>
+              <option value="multiplicar" onkeypress="actualizarTipoMezcla()">Multiplicar</option>
             </select>
           </div>
         </div>
@@ -94,7 +94,7 @@
 
         <div class="ajustes-brillo">
           <label for="brillo">BRILLO</label>
-          <input type="range" id="brillo" min="0" max="1" value="1" step="0.1">
+          <input type="range" id="brillo" min="0" max="1" value="1" step="0.1" >
         </div>
 
         <div class="ajustes-brillo">
@@ -242,7 +242,7 @@
         <div class="contorno-boton">
           <button id="botonContorno-vacio" onclick="contornear(event, 'ninguno')">NINGUNO</button>
           <button id="botonContorno-claro" onclick="contornear(event, 'claro')">CLARO</button>
-          <button id="botonContorno-oscuro"onclick="contornear(event, 'oscuro')">OSCURO</button>
+          <button id="botonContorno-oscuro" onclick="contornear(event, 'oscuro')">OSCURO</button>
         </div>
         
         <br>
