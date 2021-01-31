@@ -22,7 +22,8 @@ const sepia = document.getElementById('sepia');
 const hue = document.getElementById('hue');
 const botonSaturado= document.getElementById('botonSaturado');
 const negativo = document.getElementById('negativo');
-
+const principalDivToMeme = document.getElementById('principalDivToMeme');
+const botonImagenFiltros= document.getElementById('botonImagenFiltros');
 
 
 // Elementos a los que se les aplicara los eventos
@@ -285,9 +286,9 @@ colorImagen.addEventListener('input', (e) =>{
 
 /***************************************************/
 //tipo de fondo en imagenes
-colorImagen.addEventListener('input', cambioFiltroFondo)
+/*colorImagen.addEventListener('input', cambioFiltroFondo)
 opcionesFondo.addEventListener('change', cambiosFiltrosColor)
-
+*/
 const cambioFiltroFondo = (evento) => {
   colorImagen.innerText = evento.target.value.toUpperCase()
   centerText.style.backgroundColor = evento.target.value
@@ -318,7 +319,7 @@ opacidad.addEventListener('change', () =>{
 
 //Cambiar contraste de imagen
 
-contraste.addEventListener('change', () =>{
+contraste.addEventListener('change', ()  =>{
   const valorContraste = contraste.value;
   centerText.style.filter = `contrast(${valorContraste}%)`
 })
@@ -379,3 +380,31 @@ negativo.addEventListener('change', () =>{
 })
 
 /***************************************************/
+
+//Boton para reestablecer filtros
+
+function restablecerFiltros(){
+  brillo.value = 1
+  opacidad.value = 1
+  contraste.value = 1000
+  desenfoque.value = 0
+  escalaColores.value = 0
+  sepia.value = 0
+  hue.value = 0
+  botonSaturado.value = 100
+  negativo.value = 0
+  botonImagenFiltros.addEventListener('click', reestrablecerFiltros)
+}
+
+
+/***************************************************/
+
+
+
+//Boton para descargar imagen
+
+const descargarMeme = () => {
+  domtoimage.toBlob(principalDivToMeme).then(function (blob) {
+    saveAs(blob, 'mi-meme.png')
+  })
+}

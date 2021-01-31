@@ -23,9 +23,9 @@ body{
   
 .titulo{
   text-align: center;
+  margin-right: 20%;
   font-size: 36px;
   font-weight: 600;
-  margin: 10px;
   letter-spacing: -1px;
   -webkit-text-fill-color: var(--colorTitulo);
   -webkit-text-stroke: 1px black;
@@ -36,11 +36,10 @@ body{
 
 #contenedorBotones{
   display: flex;
+  margin-right: 20%;
   flex-wrap: wrap;
   margin-bottom: 5px;
   justify-content: center;
-  margin-bottom: 25px;
-  margin-top: 15px;
 }
 
 .button{
@@ -58,25 +57,46 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   width: 80%;
   background-image: url(https://img.freepik.com/free-vector/pink-neon-background_53876-91656.jpg?size=626&ext=jpg);
 }
   
 .cajaSeccion {
-  height: 472px;
-  margin-top: 19%;
-  margin-bottom: 38%;
+  height: 436px;
   width: 100%;
-  margin-left: 25%;
-  max-width: 53%;
-  background-color: black;
+  margin-top: 0%;
+  max-width: 60%;
+  margin-top: 2%;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #000;
   border: 1px solid black;
 
+}
+
+.boton5 {
+  color: #fff !important;
+  font-size: 20px;
+  margin-right: 2%;
+  font-weight: 500;
+  padding: 0.5em 1.2em;
+  background: #9D1D86;
+  cursor: pointer;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  position: relative;
+  border: 2px solid #318aac;
+  outline: 1px solid;
+  outline-color: rgba(49, 138, 172, 0.4);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.boton5:hover {
+  box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+  outline-color: rgba(49, 138, 172, 0);
+  outline-offset: 80px;
+  text-shadow: 1px 1px 6px #fff;
 }
 
 .cajaPadre{
@@ -429,7 +449,7 @@ input[type=color]::-webkit-color-swatch {
   cursor: pointer;
 }
 
-#botonImagenFiltros {
+#botonImagenFiltros{
   margin-top: 13px;
   text-decoration: none;
   font-weight: 600;
@@ -444,6 +464,7 @@ input[type=color]::-webkit-color-swatch {
   border-radius: 33px;
   cursor: pointer;
 }
+
 
   
 .botonesColor{

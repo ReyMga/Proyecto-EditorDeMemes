@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
- <link rel="stylesheet" id="cssArchivo" href="./style.css">
+  <link rel="stylesheet" id="cssArchivo" href="./style.css">
   <link rel="stylesheet" href="./botonesMenu.css">
-   <!--<link rel="stylesheet"   href="./darkMode.css">-->
+  <script src="./FileSaver.min.js"></script>
+  <script src="./dom-to-image.min.js"></script>
+
   <title>Practica proyecto</title>
 </head>
 
@@ -45,11 +47,12 @@
   <section class="textoSeccionCenter" >
     <!--****************COMIENZO DEL MAIN TEXTO**********************-->
     <main class="cajaMain" id="contenedorPrincipal">
-      <section class="cajaSeccion">
+      <section class="cajaSeccion" id='principalDivToMeme'>
         <article id="topText" class="topText">TOP TEXT</article>
-        <article class="centerText" id="centroTextoMedio"></article>
+        <article class="centerText" id="centroTextoMedio" crossorigin="anonymous"></article>
         <article class="textoBajo" id="boton-bajo">BOTTOM TEXT</article>
       </section>
+      <span id="botonDescarga" class="boton5" onclick='descargarMeme()'>Descargar Meme</span>
     </main>
     <!--***********FINALIZACIÓN DEL MAIN***************-->
 
@@ -77,12 +80,12 @@
 
           <div class="fondo-combinacion">
             <select  id="opcionesFondo" class="filtros-opciones">
-              <option value="ninguno" onkeypress="actualizarTipoMezcla()">Ninguno</option>
-              <option value="aclarar" onkeypress="actualizarTipoMezcla()">Aclarar</option>
-              <option value="oscurecer" onkeypress="actualizarTipoMezcla()">Oscurecer</option>
-              <option value="diferencia" onkeypress="actualizarTipoMezcla()">Diferencia</option>
-              <option value="luminosidad" onkeypress="actualizarTipoMezcla()">Luminosidad</option>
-              <option value="multiplicar" onkeypress="actualizarTipoMezcla()">Multiplicar</option>
+              <option value="normal" onkeypress="actualizarTipoMezcla()">Ninguno</option>
+              <option value="lighten" onkeypress="actualizarTipoMezcla()">Aclarar</option>
+              <option value="darken" onkeypress="actualizarTipoMezcla()">Oscurecer</option>
+              <option value="difference" onkeypress="actualizarTipoMezcla()">Diferencia</option>
+              <option value="luminosity" onkeypress="actualizarTipoMezcla()">Luminosidad</option>
+              <option value="multiply" onkeypress="actualizarTipoMezcla()">Multiplicar</option>
             </select>
           </div>
         </div>
