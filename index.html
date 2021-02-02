@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <link rel="stylesheet" id="cssArchivo" href="./style.css">
   <link rel="stylesheet" href="./botonesMenu.css">
-  <script src="./FileSaver.min.js"></script>
-  <script src="./dom-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
 
   <title>Practica proyecto</title>
 </head>
@@ -78,14 +78,14 @@
           </div>
 
 
-          <div id="contenedorFondos" class="fondo-combinacion" >
+          <div class="fondo-combinacion">
             <select  id="opcionesFondo" class="filtros-opciones">
-              <option value="normal" >Ninguno</option>
-              <option value="lighten">Aclarar</option>
-              <option value="darken" >Oscurecer</option>
-              <option value="difference" >Diferencia</option>
-              <option value="luminosity" >Luminosidad</option>
-              <option value="multiply">Multiplicar</option>
+              <option value="normal" onkeypress="actualizarTipoMezcla()">Ninguno</option>
+              <option value="lighten" onkeypress="actualizarTipoMezcla()">Aclarar</option>
+              <option value="darken" onkeypress="actualizarTipoMezcla()">Oscurecer</option>
+              <option value="difference" onkeypress="actualizarTipoMezcla()">Diferencia</option>
+              <option value="luminosity" onkeypress="actualizarTipoMezcla()">Luminosidad</option>
+              <option value="multiply" onkeypress="actualizarTipoMezcla()">Multiplicar</option>
             </select>
           </div>
         </div>
