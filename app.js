@@ -407,8 +407,6 @@ function restablecerFiltros(){
 
 /***************************************************/
 
-
-
 //Boton para descargar imagen
 
 const descargarMeme = () => {
