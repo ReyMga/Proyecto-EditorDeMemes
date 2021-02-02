@@ -24,7 +24,7 @@ const botonSaturado= document.getElementById('botonSaturado');
 const negativo = document.getElementById('negativo');
 const principalDivToMeme = document.getElementById('principalDivToMeme');
 const botonImagenFiltros= document.getElementById('botonImagenFiltros');
-
+const contenedorFondos= document.getElementById('contenedorFondos');
 
 // Elementos a los que se les aplicara los eventos
 const topInput = document.getElementById('ingresoTitulo');
@@ -277,27 +277,29 @@ urlImg.addEventListener('keyup', (e) => {
 /***************************************************/
 //Fondo color de imagen
 
-colorImagen.addEventListener('input', (e) =>{
-  const backgrondColor = e.target.value;
+colorImagen.addEventListener('input', cambioColorDeImagen);
+
+function cambioColorDeImagen(){
+  const backgrondColor = colorImagen.value;
   centerText.style.backgroundColor = backgrondColor;
   colorImagenSpan.innerHTML = backgrondColor.toUpperCase();
-})
-
+}
 
 /***************************************************/
 //tipo de fondo en imagenes
-/*colorImagen.addEventListener('input', cambioFiltroFondo)
-opcionesFondo.addEventListener('change', cambiosFiltrosColor)
-*/
-const cambioFiltroFondo = (evento) => {
-  colorImagen.innerText = evento.target.value.toUpperCase()
+
+
+const actualizarColorMezcla = (evento) => {
+  colorImagenSpan.innerText = evento.target.value.toUpperCase()
   centerText.style.backgroundColor = evento.target.value
 }
 
-const cambiosFiltrosColor = (evento) => {
+const actualizarTipoMezcla = (evento) => {
   centerText.style.backgroundBlendMode = evento.target.value
 }
 
+colorImagenSpan.addEventListener('input', actualizarColorMezcla)
+opcionesFondo.addEventListener('change', actualizarTipoMezcla)
 
 /***************************************************/
 //Cambiar valores del brillo
@@ -383,17 +385,23 @@ negativo.addEventListener('change', () =>{
 
 //Boton para reestablecer filtros
 
+
+
+botonImagenFiltros.addEventListener('click', restablecerFiltros);
+
 function restablecerFiltros(){
   brillo.value = 1
   opacidad.value = 1
-  contraste.value = 1000
+  contraste.value = 100
   desenfoque.value = 0
   escalaColores.value = 0
   sepia.value = 0
   hue.value = 0
   botonSaturado.value = 100
   negativo.value = 0
-  botonImagenFiltros.addEventListener('click', reestrablecerFiltros)
+
+  cambioColorDeImagen();
+  centerText.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) blur(${desenfoque.value}px) contrast(${contraste.value}%) grayscale(${escalaColores.value}%) hue-rotate(${hue.value}deg) sepia(${sepia.value}%) saturate(${botonSaturado.value}%) invert(${negativo.value})`
 }
 
 
