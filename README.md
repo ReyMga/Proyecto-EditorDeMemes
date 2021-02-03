@@ -8,7 +8,7 @@
 ### El proyecto cuenta con dos estilos distintos, por un lado se inicia con el modo de visualización claro, y si desea el usuario podrá pasar (simplemente con un click) al modo oscuro de visualización.  
 <br>
 
-### 📌Si querés ver como  quedó el proyecto podes hacerlo desde acá
+### 📌Si querés ver como  quedó el proyecto podes hacerlo desde [acá](https://eager-brahmagupta-34b3fc.netlify.app)
 <br>
 
 ***
