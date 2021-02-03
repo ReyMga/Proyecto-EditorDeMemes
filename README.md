@@ -49,7 +49,7 @@
 
 ***
 
-### Este portfolio lo realizamos las chicas de la cursada N°6 de Ada. Siempre con la ayuda y la guía de nuestro profe [Jonhks](https://github.com/Jonhks) & [Leydy](https://github.com/leydyk93/)
+### Este proyecto se hizo posible gracias a la  ayuda y  guía de nuestro profe [Jonhks](https://github.com/Jonhks) & [Leydy](https://github.com/leydyk93/)
 
 <br>
 
