@@ -305,44 +305,47 @@ opcionesFondo.addEventListener('change', actualizarTipoMezcla)
 //Cambiar valores del brillo
 
 brillo.addEventListener('change', () =>{
-  const valorBrillo = brillo.value;
-  centerText.style.filter = `brightness(${valorBrillo})`
+  //const valorBrillo = brillo.value;
+  //centerText.style.filter = `brightness(${valorBrillo})`
+  setearFiltros();
 })
 
 /***************************************************/
 //Cambiar opacidad de imagen
 
 opacidad.addEventListener('change', () =>{
-  const valorOpacidad = opacidad.value;
-  centerText.style.filter = `opacity(${valorOpacidad})`
+  // const valorOpacidad = opacidad.value;
+  // centerText.style.filter = `opacity(${valorOpacidad})`
+  setearFiltros();
 })
-
-/***************************************************/
-
-//Cambiar contraste de imagen
-
-contraste.addEventListener('change', ()  =>{
-  const valorContraste = contraste.value;
-  centerText.style.filter = `contrast(${valorContraste}%)`
-})
-
 
 /***************************************************/
 
 //Cambiar desenfoque de imagen
 
 desenfoque.addEventListener('change', () =>{
-  const valorDesenfoque = desenfoque.value;
-  centerText.style.filter = `blur(${valorDesenfoque}px)`
+  // const valorDesenfoque = desenfoque.value;
+  // centerText.style.filter += `blur(${valorDesenfoque}px)`
+  setearFiltros();
 })
 
+
+/***************************************************/
+//Cambiar contraste de imagen
+
+contraste.addEventListener('change', ()  =>{
+  // const valorContraste = contraste.value;
+  // centerText.style.filter = `contrast(${valorContraste}%)`
+  setearFiltros();
+})
 /***************************************************/
 
 //Cambiar escala de grises
 
 escalaColores.addEventListener('change', () =>{
-  const valorEscalaColores= escalaColores.value;
-  centerText.style.filter = `grayscale(${valorEscalaColores}%)`
+  // const valorEscalaColores= escalaColores.value;
+  // centerText.style.filter = `grayscale(${valorEscalaColores}%)`
+  setearFiltros();
 })
 
 /***************************************************/
@@ -350,8 +353,9 @@ escalaColores.addEventListener('change', () =>{
 //Cambiar a color sepia la imagen
 
 sepia.addEventListener('change', () =>{
-  const valorSepia= sepia.value;
-  centerText.style.filter = `sepia(${valorSepia}%)`
+  // const valorSepia= sepia.value;
+  // centerText.style.filter = `sepia(${valorSepia}%)`
+  setearFiltros();
 })
 
 /***************************************************/
@@ -359,8 +363,9 @@ sepia.addEventListener('change', () =>{
 //Cambiar hue a la imagen
 
 hue.addEventListener('change', () =>{
-  const valorHue= hue.value;
-  centerText.style.filter = `hue-rotate(${valorHue}deg)`
+  // const valorHue= hue.value;
+  // centerText.style.filter = `hue-rotate(${valorHue}deg)`
+  setearFiltros();
 })
 
 /***************************************************/
@@ -368,8 +373,9 @@ hue.addEventListener('change', () =>{
 //Cambiar saturacion a la imagen
 
 botonSaturado.addEventListener('change', () =>{
-  const valorBotonSaturado= botonSaturado.value;
-  centerText.style.filter = `saturate(${valorBotonSaturado}%)`
+  // const valorBotonSaturado= botonSaturado.value;
+  // centerText.style.filter = `saturate(${valorBotonSaturado}%)`
+  setearFiltros();
 })
 
 /***************************************************/
@@ -377,23 +383,22 @@ botonSaturado.addEventListener('change', () =>{
 //Cambiar negativo a la imagen
 
 negativo.addEventListener('change', () =>{
-  const valorNegativo= negativo.value;
-  centerText.style.filter = `invert(${valorNegativo})`
+  // const valorNegativo= negativo.value;
+  // centerText.style.filter = `invert(${valorNegativo})`
+  setearFiltros();
 })
 
 /***************************************************/
 
 //Boton para reestablecer filtros
 
-
-
 botonImagenFiltros.addEventListener('click', restablecerFiltros);
 
 function restablecerFiltros(){
   brillo.value = 1
   opacidad.value = 1
-  contraste.value = 100
   desenfoque.value = 0
+  contraste.value = 100
   escalaColores.value = 0
   sepia.value = 0
   hue.value = 0
@@ -401,9 +406,12 @@ function restablecerFiltros(){
   negativo.value = 0
 
   cambioColorDeImagen();
-  centerText.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) blur(${desenfoque.value}px) contrast(${contraste.value}%) grayscale(${escalaColores.value}%) hue-rotate(${hue.value}deg) sepia(${sepia.value}%) saturate(${botonSaturado.value}%) invert(${negativo.value})`
+  setearFiltros();
 }
-
+function setearFiltros()
+{
+  centerText.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) blur(${desenfoque.value}px) contrast(${contraste.value}%) grayscale(${escalaColores.value}%) hue-rotate(${hue.value}deg) sepia(${sepia.value}%) saturate(${botonSaturado.value}%) invert(${negativo.value})`;
+}
 
 /***************************************************/
 
