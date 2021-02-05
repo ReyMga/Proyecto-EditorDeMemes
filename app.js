@@ -40,7 +40,8 @@ const transparente = document.getElementById('transparente');
 const urlImg = document.getElementById('inputImagen');
 const botonContornoClaro = document.getElementById('botonContorno-claro');
 const botonContornoOscuro = document.getElementById('botonContorno-oscuro');
-
+const botonCerrar = document.getElementById("botonCerrar");
+const  botonCerrarTexto = document.getElementById('botonCerrarTexto');
 /***************************************************/
 //Cambio de texto superior
 
@@ -229,11 +230,13 @@ showImageAtributes();
 function showImageAtributes(){
   textoSeccion.style.display= 'none';
   panelImg.style.display = '';
+  contenedorPrincipal.style.width="80%";
 }
 
 function showTextAtributes(){
   panelImg.style.display='none';
   textoSeccion.style.display= ''; 
+  contenedorPrincipal.style.width="80%";
 }
 
 /***************************************************/
@@ -422,3 +425,26 @@ const descargarMeme = () => {
     saveAs(blob, 'mi-meme.png')
   })
 }
+
+/**************************************************/
+//Boton cerrar Imagen
+botonCerrar.addEventListener("click", function(){
+  let asides = document.getElementsByTagName('aside');
+  for(let i=0; i<asides.length; i++)
+  {
+    asides[i].style.display="none";
+    contenedorPrincipal.style.width="100%";
+  }
+});
+
+
+//Boton cerrar texto
+
+botonCerrarTexto.addEventListener("click", function(){
+  let asides = document.getElementsByTagName('aside');
+  for(let i=0; i<asides.length; i++)
+  {
+    asides[i].style.display="none";
+    contenedorPrincipal.style.width="100%";
+  }
+});

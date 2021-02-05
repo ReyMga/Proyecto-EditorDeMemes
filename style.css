@@ -15,6 +15,7 @@
 }
   
 body{
+
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -54,28 +55,28 @@ body{
 
 .cajaMain{
   flex-grow: 1;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 20px;
   align-items: center;
-  height: 80vh;
-  width: 80%;
   background-image: url(https://img.freepik.com/free-vector/pink-neon-background_53876-91656.jpg?size=626&ext=jpg);
 }
-  
+ 
+
+
 .cajaSeccion {
-  height: 436px;
-  width: 100%;
-  margin-top: 12%;
-  max-width: 60%;
-  margin-bottom: 0.5%;
+  min-height: 436px;
+  width: 60%;
+  margin-top: 10%;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #000;
   border: 1px solid black;
-
 }
+
 
 .boton5 {
   color: #fff !important;
@@ -145,6 +146,7 @@ body{
   color: #000;
 }
 
+
 .centerText{
   height: 60%;
   padding: 20%;
@@ -153,6 +155,7 @@ body{
   flex-grow: 1;
   background-size: cover;
 }
+
   
 .colorBotonTexto{
   margin: 1%;
@@ -595,3 +598,134 @@ input[type=color]::-webkit-color-swatch {
   /* font-size; */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+/***Boton cerrar*/
+
+.botonCerrar {
+  position: fixed;
+  background-color: #FF5EF2;
+  top: 15px;
+  right: 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.botonCerrar:focus,
+.botonCerrar:hover {
+  background-color: #9D72FF;
+}
+
+/*
+  *********************************** 
+              Responsive
+  ***********************************
+*/
+
+@media (min-width: 901px) {
+  aside {
+    display: block;
+    box-shadow: none;
+  }
+  .botonCerrar {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 801px) and (max-width:900px){
+
+  .botonCerrar {
+    display: none;
+  }
+
+  #panelImg, #textoSeccion{
+    width: 30%;
+  }
+
+  .topText, .textoBajo{
+    font-size: 10%;
+    display: flex;
+    width: 100%;
+    padding: 17px 30px;
+    z-index: auto;
+    flex-direction: column-reverse;
+  }
+
+  .cajaSeccion{
+    width: 55vh;
+    min-height: 63vh;
+  }
+}  
+
+
+@media (max-width: 800px) {
+  .titulo {
+    font-size: 26px;
+    width: 100%;
+  }
+
+
+  .cajaMain{
+    width: 100%;
+    min-height: 80vh;
+  }
+
+  .topText, .textoBajo{
+    font-size: 10%;
+    display: flex;
+    width: 100%;
+    padding: 17px 30px;
+    z-index: auto;
+    flex-direction: column-reverse;
+  }
+  
+  .glow-on-hover{
+    width: 25%;
+    font-size: x-small;
+    margin: 1%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .boton5{
+    padding: 4px 5px;
+    position: absolute;
+    margin-bottom: 1%;
+    bottom:0;
+  }
+
+  .cajaSeccion{
+    position: absolute;
+    width: 50vh;
+    min-height: 40vh;
+    top: 20%;
+  }
+  
+  #panelImg, #textoSeccion{
+    width: 100%;
+  }
+
+  .centerText{
+    padding: 30%;
+  }
+
+  .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10%;
+    width: 100%;
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+
+  aside{
+    width: 100%;
+  }   
+} 

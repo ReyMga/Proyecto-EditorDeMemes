@@ -15,6 +15,7 @@ header {
     width: 78%;
 }
 
+@media (min-width: 700px) {
 .glow-on-hover {
     width: 140px;
     margin: 1%;
@@ -27,6 +28,7 @@ header {
     position: relative;
     z-index: 0;
     border-radius: 10px;
+}
 }
 
 .glow-on-hover:before {
