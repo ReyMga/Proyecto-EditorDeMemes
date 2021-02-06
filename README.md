@@ -57,7 +57,7 @@
 ***
 
 
-### Aquí se adjuntan algunos Pseudocódigos correspondientes al proyecto:  
+# Aquí se adjuntan algunos Pseudocódigos correspondientes al proyecto:  
 ## En este ejemplo, podemos observar el pseudocódigo y el DFD de la sección correspondiente al interlineado: 
 ![imagen](./img/pseudocodigo2.jpg)
 
