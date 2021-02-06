@@ -36,11 +36,11 @@
 <br>
 ***
 
-## Construido con 🛠️
+## Esta página fue construida con 🛠️
 
-#### [HTML](https://es.wikipedia.org/wiki/HTML)
-#### [CSS](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada)
-#### [JAVASCRIPT](https://www.javascript.com/)
+#### [HTML]
+#### [CSS]
+#### [JAVASCRIPT]
 
 ***
 
@@ -58,11 +58,12 @@
 
 
 ### Aquí se adjuntan algunos Pseudocódigos correspondientes al proyecto:  
+![imagen](./img/pseudocodigo2.jpg)
 ![imagen](./img/pseudocodigo1.jpg)
 
 # Expresiones de Gratitud 🎁
 
-### Este proyecto se hizo posible gracias a la  ayuda y  guía de nuestro profe [Jonhks](https://github.com/Jonhks) & [Leydy](https://github.com/leydyk93/)
+### Este proyecto se hizo posible gracias a la  ayuda y  guía de nuestros profes [Jonhks](https://github.com/Jonhks) & [Leydy](https://github.com/leydyk93/)
 
 <br>
 
