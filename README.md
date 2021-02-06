@@ -36,11 +36,11 @@
 <br>
 ***
 
-# Construido con 🛠️
+## Construido con 🛠️
 
-## [HTML](https://es.wikipedia.org/wiki/HTML)
-## [CSS](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada)
-## [JAVASCRIPT](https://www.javascript.com/)
+#### [HTML](https://es.wikipedia.org/wiki/HTML)
+#### [CSS](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada)
+#### [JAVASCRIPT](https://www.javascript.com/)
 
 ***
 
@@ -55,16 +55,17 @@
 ![imagen](./img/modoOscuro.png)
 
 ***
-### Expresiones de Gratitud 🎁
+
+
+### Aquí se adjuntan algunos Pseudocódigos correspondientes al proyecto:  
+![imagen](./img/pseudocodigo1.jpg)
+
+# Expresiones de Gratitud 🎁
 
 ### Este proyecto se hizo posible gracias a la  ayuda y  guía de nuestro profe [Jonhks](https://github.com/Jonhks) & [Leydy](https://github.com/leydyk93/)
 
 <br>
 
 ***
-
-### Aquí se adjuntan algunos Pseudocódigos correspondientes al proyecto:  
-![imagen](./img/pseudocodigo1.jpg)
-
 
 ### De Raquel 🖤🧡
