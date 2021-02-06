@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./botonesMenu.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
-  <title>Editor de memes</title>
+  <title >Editor de memes</title>
 </head>
 
 
@@ -20,20 +20,20 @@
 
   <!--******************COMIENZO DEL HEADER**********************-->
   <header class="cajaPadre">
-    <h1 id="titulo" class="titulo" lang="es">GENERADOR DE MEMES</h1>
+    <h1  arial-label="generador de texto" id="titulo" class="titulo"  lang="es">GENERADOR DE MEMES</h1>
     <div id="contenedorBotones" class="wrap">
       
-      <button id="botonImagen" class="glow-on-hover" onclick="showImageAtributes()" aria-label="boton de imagen">
+      <button aria-label="botón de imagen"  id="botonImagen" class="glow-on-hover" onclick="showImageAtributes()" >
       <i class="fa fa-images"></i>
       Imagen 
     </button>
 
-      <button id="botonTexto" class="glow-on-hover" onclick="showTextAtributes()" aria-label="boton de texto">
+      <button aria-label="botón de texto" id="botonTexto"  class="glow-on-hover" onclick="showTextAtributes()" >
         <i class= "fa fa-edit"></i>
         Texto
       </button>
 
-      <button id="botonToggle" onclick="cambiarArchivo(this)" class="glow-on-hover" aria-label="boton para cambiar el modo de visualización">
+      <button id="botonToggle" onclick="cambiarArchivo(this)" class="glow-on-hover" aria-label="botón para cambiar el modo de visualización">
         🌚 Modo oscuro
       </button>
     </div>
@@ -45,22 +45,22 @@
  
 
   
-  <section class="textoSeccionCenter" >
+  <section aria-label="seccion de texto" class="textoSeccionCenter" >
     <!--****************COMIENZO DEL MAIN TEXTO**********************-->
     <main class="cajaMain" id="contenedorPrincipal">
       <section class="cajaSeccion" id='principalDivToMeme'>
-        <article id="topText" class="topText" aria-label="texto superior">TOP TEXT</article>
-        <article class="centerText" id="centroTextoMedio" crossorigin="anonymous" aria-label="visualización de imagen"></article>
-        <article class="textoBajo" id="boton-bajo" aria-label="texto inferior">BOTTOM TEXT</article>
+        <article  aria-label="texto superior"id="topText" class="topText" >TOP TEXT</article>
+        <article aria-label="visualización de imagen" class="centerText" id="centroTextoMedio" crossorigin="anonymous" ></article>
+        <article  aria-label="texto inferior" class="textoBajo" id="boton-bajo">BOTTOM TEXT</article>
       </section>
-      <span id="botonDescarga" class="boton5" onclick='descargarMeme()' aria-label="presiona este boton para descargar el meme que diseñaste">Descargar Meme</span>
+      <span aria-label="presiona este botón para descargar el meme que diseñaste" id="botonDescarga" class="boton5" onclick='descargarMeme()' >Descargar Meme</span>
     </main>
     <!--***********FINALIZACIÓN DEL MAIN***************-->
 
 
     
     <!--******************COMIENZO DE LA SECCIÓN IMAGEN-->
-    <aside  class="panel-img" id="panelImg">
+    <aside aria-label="Sección de imagen" class="panel-img" id="panelImg">
       <button class="botonCerrar" id="botonCerrar" lang="es" aria-label="Cerrar panel" aria-label="cerrar panel">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
@@ -154,23 +154,23 @@
 
 
     <!----****************COMIENZO DEL ASIDE DE TEXTO**********************---------------->
-    <aside class="columnaLateralTexto" id="textoSeccion">
+    <aside aria-label="sección de texto" class="columnaLateralTexto" id="textoSeccion">
       <button class="botonCerrar" id="botonCerrarTexto" aria-label="Cerrar panel">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
     <form>
-      <h2 class="tituloTextoAside" id="tituloTexxt"  aria-label="panel de texto">TEXTO</h2>
+      <h2  aria-label="panel de texto" class="tituloTextoAside" id="tituloTexxt" >TEXTO</h2>
 
       <div  class="contenedorColumnaTexto">
-        <h4 class="panel-control-title"  aria-label="ingrese el texto superior">SUPERIOR</h4>
-        <textarea  type="text" id="ingresoTitulo" value="TOP TEXT"  aria-label="ingrese el texto inferior">
+        <h4 class="panel-control-title"  aria-label="texto superior">SUPERIOR</h4>
+        <textarea  aria-label="ingrese el texto superior" type="text" id="ingresoTitulo" value="TOP TEXT"  >
         TOP TEXT  
         </textarea>
       </div>
 
         
         <div class="contenedorColumnaTexto">
-          <label id="boton-checkbox" class="myCheckbox" for="top-check"  aria-label="elegir quitar el texto superior">Sin texto superior
+          <label id="boton-checkbox" class="myCheckbox" for="top-check"  aria-label=" quitar el texto superior">Sin texto superior
             <input id="top-check" type="checkbox" >
           </label>
         </div>
@@ -178,8 +178,8 @@
         <br>
 
         <div class="contenedorColumnaTexto">
-          <h4 class="panel-control-title"  aria-label="escribir  texto inferior">INFERIOR</h4>
-          <textarea type="text" id="textoInferior" value="boton bajo">
+          <h4 class="panel-control-title"  aria-label="texto inferior">INFERIOR</h4>
+          <textarea aria-label="ingrese el texto inferior" type="text" id="textoInferior" value="boton bajo">
             BOTTOM TEXT
           </textarea>
           
@@ -187,7 +187,7 @@
 
         <div class="contenedorColumnaTexto">
 
-          <label for="top-check-2" class="top-check-2"  aria-label="elegir quitar el texto inferior">Sin texto inferior
+          <label for="top-check-2" class="top-check-2"  aria-label=" quitar el texto inferior">Sin texto inferior
             <input id="top-check-2" type="checkbox">
           </label>
 
