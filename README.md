@@ -5,7 +5,7 @@
 
 
 ### Durante la elaboración del proyecto, se trabajó con distintos tipos de desafios relacionados a lo visto en las clases sobre JavaScript y su interaccion con HTML y CSS. El proyecto está diseñado con el fin de poder ser utilizado por distintos usuarios para personalizar y elaborar desde el comienzo, sus propios memes. 
-### El proyecto cuenta con dos estilos distintos, por un lado se inicia con el modo de visualización claro, y si desea el usuario podrá pasar (simplemente con un click) al modo oscuro de visualización.  
+### Este proyecto cuenta con dos estilos distintos, por un lado se inicia con el modo de visualización claro, y si desea el usuario podrá pasar (simplemente con un click) al modo de visualización oscuro.  
 <br>
 
 ### 📌Si querés ver como  quedó el proyecto podes hacerlo desde [acá](https://eager-brahmagupta-34b3fc.netlify.app)
@@ -34,6 +34,13 @@
 ### Este proyecto no necesita la instalación de ninguna dependencia, por ahora!✋🏼
 
 <br>
+***
+
+# Construido con 🛠️
+
+## [HTML](https://es.wikipedia.org/wiki/HTML)
+## [CSS](https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada)
+## [JAVASCRIPT](https://www.javascript.com/)
 
 ***
 
@@ -48,11 +55,16 @@
 ![imagen](./img/modoOscuro.png)
 
 ***
+### Expresiones de Gratitud 🎁
 
 ### Este proyecto se hizo posible gracias a la  ayuda y  guía de nuestro profe [Jonhks](https://github.com/Jonhks) & [Leydy](https://github.com/leydyk93/)
 
 <br>
 
 ***
+
+### Aquí se adjuntan algunos Pseudocódigos correspondientes al proyecto:  
+![imagen](./img/pseudocodigo1.jpg)
+
 
 ### De Raquel 🖤🧡
