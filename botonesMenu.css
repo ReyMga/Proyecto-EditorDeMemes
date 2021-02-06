@@ -11,9 +11,6 @@ body {
     background: #000;
 }
 
-header {
-    width: 78%;
-}
 
 @media (min-width: 700px) {
 .glow-on-hover {
