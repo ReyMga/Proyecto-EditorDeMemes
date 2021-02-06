@@ -1,6 +1,6 @@
   
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,22 +19,21 @@
 <body>
 
   <!--******************COMIENZO DEL HEADER**********************-->
-
   <header class="cajaPadre">
-    <h1 id="titulo" class="titulo">GENERADOR DE MEMES</h1>
+    <h1 id="titulo" class="titulo" lang="es">GENERADOR DE MEMES</h1>
     <div id="contenedorBotones" class="wrap">
       
-      <button id="botonImagen" class="glow-on-hover" onclick="showImageAtributes()">
+      <button id="botonImagen" class="glow-on-hover" onclick="showImageAtributes()" aria-label="boton de imagen">
       <i class="fa fa-images"></i>
       Imagen 
     </button>
 
-      <button id="botonTexto" class="glow-on-hover" onclick="showTextAtributes()">
+      <button id="botonTexto" class="glow-on-hover" onclick="showTextAtributes()" aria-label="boton de texto">
         <i class= "fa fa-edit"></i>
         Texto
       </button>
 
-      <button id="botonToggle" onclick="cambiarArchivo(this)" class="glow-on-hover">
+      <button id="botonToggle" onclick="cambiarArchivo(this)" class="glow-on-hover" aria-label="boton para cambiar el modo de visualización">
         🌚 Modo oscuro
       </button>
     </div>
@@ -50,11 +49,11 @@
     <!--****************COMIENZO DEL MAIN TEXTO**********************-->
     <main class="cajaMain" id="contenedorPrincipal">
       <section class="cajaSeccion" id='principalDivToMeme'>
-        <article id="topText" class="topText">TOP TEXT</article>
-        <article class="centerText" id="centroTextoMedio" crossorigin="anonymous"></article>
-        <article class="textoBajo" id="boton-bajo">BOTTOM TEXT</article>
+        <article id="topText" class="topText" aria-label="texto superior">TOP TEXT</article>
+        <article class="centerText" id="centroTextoMedio" crossorigin="anonymous" aria-label="visualización de imagen"></article>
+        <article class="textoBajo" id="boton-bajo" aria-label="texto inferior">BOTTOM TEXT</article>
       </section>
-      <span id="botonDescarga" class="boton5" onclick='descargarMeme()'>Descargar Meme</span>
+      <span id="botonDescarga" class="boton5" onclick='descargarMeme()' aria-label="presiona este boton para descargar el meme que diseñaste">Descargar Meme</span>
     </main>
     <!--***********FINALIZACIÓN DEL MAIN***************-->
 
@@ -62,35 +61,35 @@
     
     <!--******************COMIENZO DE LA SECCIÓN IMAGEN-->
     <aside  class="panel-img" id="panelImg">
-      <button class="botonCerrar" id="botonCerrar" aria-label="Cerrar panel">
+      <button class="botonCerrar" id="botonCerrar" lang="es" aria-label="Cerrar panel" aria-label="cerrar panel">
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
-      <h2 class="tituloImagen" id="tituloSeccionImagen">IMAGEN</h2>
+      <h2 class="tituloImagen" id="tituloSeccionImagen" lang="es" aria-label="panel de configuracion de imagen">IMAGEN</h2>
 
 
       <div class="seccionUrl">
-        <h4 class="titulo-url">URL</h4>
-        <input type="text" class="inputUrl-imagen" id="inputImagen"  aria-label="ingreso URL">
+        <h4 class="titulo-url" lang="es" aria-label="ingrese aqui la direccion de la imagen que desea pegar">URL</h4>
+        <input type="text" class="inputUrl-imagen" id="inputImagen"  aria-label="ingresa la URL aquí">
       </div>
           
       
       <div class="fondo">
-        <h3 class="titulo-fondo">FONDO</h3>
+        <h3 class="titulo-fondo" aria-label="elige el color de fondo que desees que tenga las letras">FONDO</h3>
         <div class="columnas">
           <div class="coloresImagen">
-            <input type="color" aria-label="fondo imagen" value="#FFFFFF" id="colorImagen"  aria-label="fondo imagen">
+            <input type="color" aria-label="fondo imagen" value="#FFFFFF" id="colorImagen"  aria-label="este es el color de fondo de la imagen">
             <span id="colorImagenSpan" aria-hidden="true">#FFFFFF</span>
           </div>
 
 
           <div class="fondo-combinacion">
-            <select  id="opcionesFondo" class="filtros-opciones">
-              <option value="normal" onkeypress="actualizarTipoMezcla()">Ninguno</option>
-              <option value="lighten" onkeypress="actualizarTipoMezcla()">Aclarar</option>
-              <option value="darken" onkeypress="actualizarTipoMezcla()">Oscurecer</option>
-              <option value="difference" onkeypress="actualizarTipoMezcla()">Diferencia</option>
-              <option value="luminosity" onkeypress="actualizarTipoMezcla()">Luminosidad</option>
-              <option value="multiply" onkeypress="actualizarTipoMezcla()">Multiplicar</option>
+            <select  id="opcionesFondo" class="filtros-opciones" aria-label="elige las combinaciones para el fondo">
+              <option value="normal" onkeypress="actualizarTipoMezcla()" tabindex="1" aria-label="ninguno">Ninguno</option>
+              <option value="lighten" onkeypress="actualizarTipoMezcla()" tabindex="2"  aria-label="aclarar">Aclarar</option>
+              <option value="darken" onkeypress="actualizarTipoMezcla()" tabindex="3"  aria-label="oscurecer">Oscurecer</option>
+              <option value="difference" onkeypress="actualizarTipoMezcla()" tabindex="4"  aria-label="diferencia">Diferencia</option>
+              <option value="luminosity" onkeypress="actualizarTipoMezcla()" tabindex="5"  aria-label="luminosidad">Luminosidad</option>
+              <option value="multiply" onkeypress="actualizarTipoMezcla()" tabindex="6"  aria-label="multiplicar">Multiplicar</option>
             </select>
           </div>
         </div>
@@ -98,56 +97,56 @@
         
 
       <div class="caja-filtros">
-        <h3 class="titulo-filtro">FILTROS</h3>
+        <h3 class="titulo-filtro"  aria-label="aquí puedes elegir los filtros">FILTROS</h3>
 
         <div class="ajustes-brillo">
-          <label for="brillo">BRILLO</label>
+          <label for="brillo" tabindex="1"  aria-label="brillo">BRILLO</label>
           <input type="range" id="brillo" min="0" max="1" value="1" step="0.1" >
         </div>
 
         <div class="ajustes-brillo">
-          <label for="opacidad">OPACIDAD</label>
+          <label for="opacidad" tabindex="2"  aria-label="opacidad">OPACIDAD</label>
           <input type="range" id="opacidad" min="0" max="1" value="1" step="0.1">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="contraste">CONTRASTE</label>
+          <label for="contraste" tabindex="3"  aria-label="contraste">CONTRASTE</label>
           <input type="range" id="contraste" min="100" max="1000" value="100">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="desenfoque">DESENFOQUE</label>
+          <label for="desenfoque" tabindex="4"  aria-label="desenfoque">DESENFOQUE</label>
           <input type="range" id="desenfoque" min="0" max="10" value="0" step="0.1">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="escalaColores">ESCALA DE GRISES</label>
+          <label for="escalaColores" tabindex="5"  aria-label="escala de grises">ESCALA DE GRISES</label>
           <input type="range" id="escalaColores" min="0" max="100" value="0">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="sepia">SEPIA</label>
+          <label for="sepia" tabindex="6"  aria-label="color sepia">SEPIA</label>
           <input type="range" id="sepia" min="0" max="100" value="0">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="hue">HUE</label>
+          <label for="hue" tabindex="6"  aria-label="desenfoque, hue">HUE</label>
           <input type="range" id="hue" min="0" max="360" value="0">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="botonSaturado">SATURADO</label>
+          <label for="botonSaturado" tabindex="7"  aria-label="saturado">SATURADO</label>
           <input type="range" id="botonSaturado" min="100" max="1000" value="100" step="10">
         </div>
 
         <div class="ajustes-brillo">
-          <label for="negativo">NEGATIVO</label>
+          <label for="negativo" tabindex="8"  aria-label="negativo">NEGATIVO</label>
           <input type="range" id="negativo" min="0" max="1" value="0" step="0.1">
         </div>
 
       </div>
 
-      <button class="botonImagen" id="botonImagenFiltros"> RESTABLECER FILTROS</button>
+      <button class="botonImagen" id="botonImagenFiltros"  aria-label="boton de reestablecer filtros"> RESTABLECER FILTROS</button>
     
     </aside>
     <!----------------------FINALIZACIÓN SECCIÓN IMAGEN------------------------------------>
@@ -160,19 +159,18 @@
         <i class="fas fa-times" aria-hidden="true"></i>
       </button>
     <form>
-      <h2 class="tituloTextoAside" id="tituloTexxt">TEXTO</h2>
+      <h2 class="tituloTextoAside" id="tituloTexxt"  aria-label="panel de texto">TEXTO</h2>
 
       <div  class="contenedorColumnaTexto">
-        <h4 class="panel-control-title">SUPERIOR</h4>
-        <textarea  type="text" id="ingresoTitulo" value="TOP TEXT">
+        <h4 class="panel-control-title"  aria-label="ingrese el texto superior">SUPERIOR</h4>
+        <textarea  type="text" id="ingresoTitulo" value="TOP TEXT"  aria-label="ingrese el texto inferior">
         TOP TEXT  
         </textarea>
-          
       </div>
 
         
         <div class="contenedorColumnaTexto">
-          <label id="boton-checkbox" class="myCheckbox" for="top-check" >Sin texto superior
+          <label id="boton-checkbox" class="myCheckbox" for="top-check"  aria-label="elegir quitar el texto superior">Sin texto superior
             <input id="top-check" type="checkbox" >
           </label>
         </div>
@@ -180,7 +178,7 @@
         <br>
 
         <div class="contenedorColumnaTexto">
-          <h4 class="panel-control-title">INFERIOR</h4>
+          <h4 class="panel-control-title"  aria-label="escribir  texto inferior">INFERIOR</h4>
           <textarea type="text" id="textoInferior" value="boton bajo">
             BOTTOM TEXT
           </textarea>
@@ -189,7 +187,7 @@
 
         <div class="contenedorColumnaTexto">
 
-          <label for="top-check-2" class="top-check-2" >Sin texto inferior
+          <label for="top-check-2" class="top-check-2"  aria-label="elegir quitar el texto inferior">Sin texto inferior
             <input id="top-check-2" type="checkbox">
           </label>
 
@@ -199,27 +197,27 @@
 
         <!--****************ESTILOS AL TEXTO**********************-->
         <div class="contenedorColumnaTexto">
-          <label  id="fuente">FUENTE</label>
+          <label  id="fuente"  aria-label="elegir tipo de fuente">FUENTE</label>
           <select name="option" id="estilosDeFuentes">
-            <option value="arial">Arial</option>
-            <option value="arial-black">Arial Black</option>
-            <option value="american-typewriter">American Typewriter</option>
-            <option value="andale-mono">Andale Mono</option>
-            <option value="Impact">Impact</option>
-            <option class="helvetica" value="helvetica">Helvetica</option>
+            <option value="arial"  aria-label="fuente arial">Arial</option>
+            <option value="arial-black"  aria-label="arial black">Arial Black</option>
+            <option value="american-typewriter"  aria-label="American Typewriter">American Typewriter</option>
+            <option value="andale-mono" aria-label="Andale Mono">Andale Mono</option>
+            <option value="Impact" aria-label="Impact">Impact</option>
+            <option class="helvetica" value="helvetica" aria-label="Helvetica">Helvetica</option>
           </select>
         </div>
 
-        <div class="botonEstilos">
+        <div class="botonEstilos" aria-label="boton de estilos">
           <input id="tamañoLetra" type="number" value="40" min="0" max="50">
-          <button id="izquierda"><img src="./img/left.ico" alt=""></button>
-          <button  id="centrar"><img src="./img/center.ico" alt=""></button>
-          <button  id="derecha"><img src="./img/right.ico" alt=""></a></button>
+          <button id="izquierda"><img src="./img/left.ico" alt="Alinear texto a la izquierda"></button>
+          <button  id="centrar"><img src="./img/center.ico" alt="Centrar texto"></button>
+          <button  id="derecha"><img src="./img/right.ico" alt="Alinear texto a la derecha"></a></button>
         </div>
         
-        <div class="botonEstilos">
+        <div class="botonEstilos" aria-label="boton de estilos">
           <div class="colorBotonTexto">
-            <label  for="colorLetra" class="titleColorLabel">COLOR</label>
+            <label  for="colorLetra" class="titleColorLabel" aria-label="boton de color">COLOR</label>
             <div class="botonesColor">
               <input type="color" id="colorLetra" class="colorLetraInput" value="#000000">
               <span id="textoColor">#000000</span>
@@ -227,7 +225,7 @@
           </div>
 
           <div class="codigoColor">
-            <label for="fondoLabel" class="fondoLabelInput">FONDO</label>
+            <label for="fondoLabel" class="fondoLabelInput" aria-label="boton de fondo">FONDO</label>
             <div class="botonesColor">
               <input type="color" id="fondoLabel" value="#9D72FF">
               <span id="colorLabelFondo"> #9D72FF</span>
@@ -237,7 +235,7 @@
 
         <div class="contenedorColumnaTexto">
 
-          <label for="transparente" class="transparente" onclick="actualizarFondoTexto()">Fondo transparente
+          <label for="transparente" class="transparente" onclick="actualizarFondoTexto()"  aria-label="elegir fondo transparente">Fondo transparente
             <input class="top-check-2" id="transparente" type="checkbox">
           </label>
 
@@ -247,33 +245,33 @@
         <br>
 
         <div class="contorno">
-          <label id="contorno">CONTORNO</label>
+          <label id="contorno"  aria-label="elegir contorno">CONTORNO</label>
         </div>
 
         <div class="contorno-boton">
-          <button id="botonContorno-vacio" onclick="contornear(event, 'ninguno')">NINGUNO</button>
-          <button id="botonContorno-claro" onclick="contornear(event, 'claro')">CLARO</button>
-          <button id="botonContorno-oscuro" onclick="contornear(event, 'oscuro')">OSCURO</button>
+          <button id="botonContorno-vacio" onclick="contornear(event, 'ninguno')"  aria-label="ninguno">NINGUNO</button>
+          <button id="botonContorno-claro" onclick="contornear(event, 'claro')"  aria-label="claro">CLARO</button>
+          <button id="botonContorno-oscuro" onclick="contornear(event, 'oscuro')"  aria-label="oscuro">OSCURO</button>
         </div>
         
         <br>
 
         <div>
-          <label for="espaciado" id="espaciado">ESPACIADO</label>
+          <label for="espaciado" id="espaciado"  aria-label="boton de espaciado">ESPACIADO</label>
           <input type="number" class="espaciado-class" id="espaciadoValue" value="35" onchange="espaciadoTexto()">
         </div>
 
         <br>
 
         <div>
-          <label for="interlineado" id="interlineado">INTERLINEADO</label>
+          <label for="interlineado" id="interlineado"  aria-label="boton de interlineado">INTERLINEADO</label>
           <select name="interlineado" id="interlineadoValue" onclick="aplicandoInterlineado()">
-            <option value="0.8">0.8</option>
-            <option value="1">1</option>
-            <option selected value="1.2">1.2</option>
-            <option value="1.5">1.5</option>
-            <option value="2">2</option>
-            <option value="2.5">2.5</option>
+            <option value="0.8"  aria-label="valor 0.8">0.8</option>
+            <option value="1" aria-label="valor 1">1</option>
+            <option selected value="1.2" aria-label="valor 1.2">1.2</option>
+            <option value="1.5" aria-label="valor 1.5">1.5</option>
+            <option value="2" aria-label="valor 2">2</option>
+            <option value="2.5" aria-label="valor 2.5">2.5</option>
           </select>
         </div>
         
