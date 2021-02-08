@@ -1,3 +1,4 @@
+'use strict'
 // Elementos a los que le aplicaremos el innerHTML o donde se ingresa el DOM
 const topText = document.getElementById('topText');
 const segundoTexto = document.getElementById('boton-bajo');

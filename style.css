@@ -733,9 +733,11 @@ input[type=color]::-webkit-color-swatch {
     width: 22%;
     box-shadow: none;
   }
+  
   .botonCerrar {
     display: none;
   }
+  
   .cajaPadre{
     height: 17vh;
   }
