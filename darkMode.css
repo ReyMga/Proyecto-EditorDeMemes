@@ -587,7 +587,7 @@ body{
     border: transparent;
     cursor: pointer;
     height: auto;
-    width: 25%;
+    width: 20%;
   }
   
   #colorLetraInput{
@@ -612,7 +612,7 @@ body{
     border: transparent;
     cursor: pointer;
     height: auto;
-    width: 25%;
+    width: 20%;
   }
 
 /***Boton cerrar*/
@@ -653,7 +653,11 @@ body{
 } 
 
 @media (max-width:1050px) {
-  
+  #panelImg, #textoSeccion {
+    display: block;
+    box-shadow: none;
+    width: 30%;
+  }
   .topText, .textoBajo{
     z-index: 0;
     font-size: 20px;
