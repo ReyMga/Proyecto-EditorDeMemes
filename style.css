@@ -616,7 +616,7 @@ input[type=color]::-webkit-color-swatch {
 
 @media (max-width:1440px) {
 
-  aside {
+  #panelImg, #textoSeccion {
     display: block;
     width: 22%;
     box-shadow: none;
@@ -632,7 +632,7 @@ input[type=color]::-webkit-color-swatch {
 } 
 
 @media (max-width:1050px) {
-  #panelImg {
+  #panelImg, #textoSeccion {
     display: block;
     box-shadow: none;
     width: 30%;
@@ -662,7 +662,7 @@ input[type=color]::-webkit-color-swatch {
     width: 100%;
   }
 
-  #panelImg, .columnaLateralTexto{
+  #panelImg, #textoSeccion{
     width: 100%;
   }
 
@@ -685,7 +685,7 @@ input[type=color]::-webkit-color-swatch {
   }
 
   .glow-on-hover{
-    width: 25%;
+    width: auto;
     font-size: x-small;
     margin: 1%;
     height: 50px;
