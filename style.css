@@ -560,13 +560,7 @@ input[type=color]::-webkit-color-swatch {
   background-color:  var( --fondoLila);
   cursor: pointer;
 }
-/*
-.titleColorLabel, .fondoLabelInput, #contorno, #espaciado, #interlineado{
-  font-size: 12%;
-  cursor: pointer;
-  color: var(--colorLetras);
-} 
-*/
+
 #izquierda, #centrar, #derecha, #interlineadoValue{
   background-color:  var( --fondoLila);
   cursor: pointer;
@@ -578,7 +572,7 @@ input[type=color]::-webkit-color-swatch {
   cursor: pointer;
   height: auto;
   width:20%;
-}
+} 
 
 .fondo {
   margin-top: 13%;
