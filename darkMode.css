@@ -524,7 +524,7 @@ body{
     background-size: 100%;
   }
   
-  .panel-control-title, .titulo-url, .titulo-fondo{
+  .panel-control-title, .titulo-url, .titulo-fondo, #fuente, .titleColorLabel, .fondoLabelInput, #contorno, #espaciado, #interlineado{
     font-size: 12px;
     color: whitesmoke;
     margin-bottom: 2%;
@@ -550,13 +550,7 @@ body{
     background-color: #4E5565;
   }
   
-  
-  #fuente, .titleColorLabel{
-    font-size: 12px;
-    margin-bottom: 6px;
-    border-radius: 5%;
-    color: whitesmoke;
-  }
+
   
   #tamañoLetra{
     display: flex;
@@ -570,12 +564,7 @@ body{
     background-color:  #4E5565;
     cursor: pointer;
   }
-  
-  #colorLetra, #fondoLabel, #contorno, #espaciado, #interlineado{
-    font-size: 12%;
-    cursor: pointer;
-    color: whitesmoke;
-  }
+
   
   #izquierda, #centrar, #derecha, #interlineadoValue{
     background-color:  #4E5565;
@@ -595,12 +584,6 @@ body{
     cursor: pointer;
   }
   
-  .titleColorLabel,.fondoLabelInput{
-    font-size: 12px;
-    margin-bottom: 0px;
-    border-radius: 5%;
-    color: whitesmoke;
-  }
 
   .fondo {
     margin-top: 13%;

@@ -514,7 +514,7 @@ input[type=color]::-webkit-color-swatch {
   font-size: 12px;
 }
 
-.panel-control-title, .titulo-url, .titulo-fondo, .titleColorLabel{
+.panel-control-title, #fuente, .titulo-url, .titulo-fondo, .titleColorLabel, .fondoLabelInput, #contorno, #espaciado, #interlineado {
   font-size: 12px;
   color: var(--colorLetras);;
   margin-bottom: 2%;
@@ -560,13 +560,13 @@ input[type=color]::-webkit-color-swatch {
   background-color:  var( --fondoLila);
   cursor: pointer;
 }
-
+/*
 .titleColorLabel, .fondoLabelInput, #contorno, #espaciado, #interlineado{
   font-size: 12%;
   cursor: pointer;
   color: var(--colorLetras);
 } 
-
+*/
 #izquierda, #centrar, #derecha, #interlineadoValue{
   background-color:  var( --fondoLila);
   cursor: pointer;
