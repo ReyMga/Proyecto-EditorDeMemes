@@ -248,7 +248,7 @@ function showTextAtributes(){
 
   // Unifico los botones
 
-  //En la línea 233, tuve que añadirle un split al href, porque me devolvía la ruta completa. Esto se debe a que yo elegi armar mi Dark mode y light mode, basandome en archivos de CSS, en lugar de llamarlo desde el body como lo haría normalmente.
+  //En la línea 233, tuve que añadirle un split al href, porque me devolvía la ruta completa. Esto se debe a que yo elegi armar mi Dark mode y light mode, basandome en archivos distintos de CSS, en lugar de llamarlo desde el body como lo haría normalmente.
 
 function cambiarArchivo(boton){
   let archivoActual = document.getElementById('cssArchivo').href.split('/')[document.getElementById('cssArchivo').href.split('/').length - 1];
